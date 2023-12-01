@@ -1,0 +1,15 @@
+[workspace]
+members = [
+    "day*/*",
+]
+resolver = "2"
+
+[workspace.package]
+version = "0.1.0"
+authors = ["Technolution  <info@technolution.nl>"]
+edition = "2021"
+license = "LicenseRef-Technolution-Proprietary"
+
+[workspace.dependencies]
+anyhow = "1.0.*"
+
