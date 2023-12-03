@@ -1,12 +1,13 @@
 [workspace]
 members = [
     "day*/*",
+    "2022/day*/rs",
 ]
 resolver = "2"
 
 [workspace.package]
 version = "0.1.0"
-authors = ["Technolution  <info@technolution.nl>"]
+authors = ["Robert Wassens <robert.wassens@technolution.nl>"]
 edition = "2021"
 license = "LicenseRef-Technolution-Proprietary"
 

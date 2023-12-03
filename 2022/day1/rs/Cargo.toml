@@ -1,5 +1,5 @@
 [package]
-name = "rs2"
+name = "rs2202-1"
 version.workspace = true
 authors.workspace = true
 edition.workspace = true
