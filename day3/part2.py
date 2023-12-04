@@ -52,11 +52,9 @@ for ln, l in enumerate(lines):
             if is_part: 
                 if v != 0: 
                     print(GREEN + str(v), end="")
-                    print(f"\n*** {las} {cas} {v} ", matrix[las][cas])
                     matrix[las][cas]*= -v
                     if matrix[las][cas] > 0: 
                         sum += matrix[las][cas]
-                        print(f"+++ {sum}")
                         sum = sum
             elif v != 0: print (RED + str(v), end="")
             if not c.isnumeric():
