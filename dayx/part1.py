@@ -8,6 +8,13 @@ ENDC = '\033[0m'
 BOLD = '\033[1m'
 UNDERLINE = '\033[4m'
 
+def string_to_ints(str, separator):
+    s = str.strip().split(separator)
+    a = []
+    for n in s:
+        a.append(int(n.strip()))
+    return a
+
 dir = os.path.dirname(__file__)
 f = open(dir+"/input.txt")
 lines = []
