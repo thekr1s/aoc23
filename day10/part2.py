@@ -29,30 +29,30 @@ def get_connected(p):
                 t=lines[np[1]][np[0]]
                 if t == "F" or t == "L" or t == "-" or t=="S":
                     c.append(np)
-                    print(end=RED)
+                    # print(end=RED)
         if dir == "N" and p[1]>0:
             if ct=="J" or ct == "|" or ct == "L" or ct == "S":
                 np=[p[0], p[1]-1, dir]
                 t=lines[np[1]][np[0]]
                 if t == "F" or t == "|" or t == "7" or t=="S":
                     c.append(np)
-                    print(end=RED)
+                    # print(end=RED)
         if dir == "E" and p[0]<len(lines[0])-1:
             if ct=="F" or ct == "-" or ct == "L" or ct == "S":
                 np=[p[0]+1, p[1], dir]
                 t=lines[np[1]][np[0]]
                 if t == "J" or t == "-" or t == "7" or t=="S":
                     c.append(np)
-                    print(end=RED)
+                    # print(end=RED)
         if dir == "S" and p[1]<len(lines)-1:
             if ct=="F" or ct == "|" or ct == "7" or ct == "S":
                 np=[p[0], p[1]+1, dir]
                 t=lines[np[1]][np[0]]
                 if t == "J" or t == "|" or t == "L" or t=="S":
                     c.append(np)
-                    print(end=RED)
+                    # print(end=RED)
         # print(t, end="")
-        print(ENDC, end="")
+        # print(ENDC, end="")
         
         
     # print()
