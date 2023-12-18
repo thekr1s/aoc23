@@ -20,14 +20,17 @@ def line_to_bin(l:str):
     l=l.replace(".","0")
     return int(l,2)
 
-def is_mirror(a, l,r):
+def is_mirror(a, l,r, fixed):
     d=a[l]^a[r]
     b=bin(d).count('1') == 1
-    if a[l]==a[r]:
+    if a[l]==a[r] or (b and not fixed):
+        if b:
+            print(l, bin(a[l]), r, bin(a[r]), a[l], a[r], d, bin(d))
+            fixed=True
         if l > 0 and r < len(a)-1:
-            return is_mirror(a,l-1, r+1)
+            return is_mirror(a,l-1, r+1, fixed)
         else:
-            return True
+            return fixed
     return False
 
 def find_mirror(lines):
@@ -45,14 +48,14 @@ def find_mirror(lines):
 
     for i in range(len(lines)-1):
         # print(i)
-        if is_mirror(lb, i, i+1):
+        if is_mirror(lb, i, i+1, False):
             n = i+1
             print(" l", n*100)
             sum += n * 100
             # break
     for i in range(len(lines[0])-1):
         # print(i)
-        if is_mirror(cb, i, i+1):
+        if is_mirror(cb, i, i+1, False):
             n = i+1
             print(" c", n)
             sum += n
